@@ -1,9 +1,10 @@
 # flashcard-app
-Flashcard app - cycle through the cards &amp; continue where you left off
+Flashcard app - cycle through the cards, change settings &amp; continue where you left off
 
 ## TODO
 Responsivity <br />
 Add the ability to change colour themes <br />
+Reset <br />
 Add the ability to hide/unhide the menu <br />
 Add the ability to flag each card (learnt or not) <br />
 Edit the flashcards <br />
