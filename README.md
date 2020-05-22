@@ -2,7 +2,7 @@
 Flashcard app - cycle through the cards &amp; continue where you left off
 
 ## TODO
-Responsibility <br />
+Responsivity <br />
 Add the ability to change colour themes <br />
 Add the ability to hide/unhide the menu <br />
 Create your own flashcards <br />
