@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito|Quicksand:900');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --clr-background: #000000;
+  --clr-card-background: #f3efe0;
+  --clr-text: #171717;
+}
+
+body {
+  background-color: var(--clr-background);
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardContainer {
+  display: flex;
+  align-items: center;
+}
+
+.left,
+.right {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+  padding: 10px;
+  height: 4rem;
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--clr-card-background);
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.card {
+  width: 600px;
+  min-height: 300px;
+  padding: 1em 2em;
+  display: flex;
+  flex-direction: column;
+  color: var(--clr-text);
+  background-color: var(--clr-card-background);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.title {
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 0.4em;
+}
+
+.card__body {
+  flex-grow: 1;
+}
+
+.text {
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+}
