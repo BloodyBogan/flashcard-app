@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito|Quicksand:900');
+@import url('https://fonts.googleapis.com/css?family=Lato|Libre+Baskerville');
 
 *,
 *::before,
@@ -9,9 +9,19 @@
 }
 
 :root {
-  --clr-background: #000000;
-  --clr-card-background: #f3efe0;
-  --clr-text: #171717;
+  --clr-background: #3e3e3e;
+  --clr-card-background: #d6c7a1;
+  --clr-text: #3e3e3e;
+  --clr-buttons: #f6e7c1;
+  --title-font: 'Libre Baskerville';
+  --text-font: 'Lato';
+  --title-font-size: 2rem;
+  --text-font-size: 1.1rem;
+}
+
+p,
+span {
+  font-family: var(--text-font);
 }
 
 body {
@@ -21,8 +31,47 @@ body {
 .container {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.options {
+  display: flex;
+  position: fixed;
+  top: 10px;
+}
+
+.options__fontSize {
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 15px;
+}
+
+.options__fontSize p {
+  color: var(--clr-card-background);
+}
+
+.fontSize {
+  color: var(--clr-buttons);
+}
+
+.btn {
+  margin: 0 5px;
+  background: transparent;
+  border: transparent;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--clr-card-background);
+  outline: transparent;
+  cursor: pointer;
+  transition: all 50ms ease-in;
+}
+
+.btn:nth-child(2) {
+  margin-left: 15px;
 }
 
 .cardContainer {
@@ -47,26 +96,39 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  transition: all 50ms ease-in;
+}
+
+.left:hover,
+.left:focus,
+.right:hover,
+.right:focus,
+.btn:hover,
+.btn:focus {
+  transform: scale(1.2);
+  color: var(--clr-buttons);
 }
 
 .card {
   width: 600px;
   min-height: 300px;
-  padding: 1em 2em;
+  padding: 1.25em 2em;
   display: flex;
   flex-direction: column;
   color: var(--clr-text);
   background-color: var(--clr-card-background);
   border-radius: 10px;
   overflow: hidden;
+  box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.1);
 }
 
 .title {
-  font-family: 'Quicksand', sans-serif;
+  font-family: var(--title-font), sans-serif;
   text-align: center;
-  font-size: 2rem;
+  font-size: var(--title-font-size);
   font-weight: 900;
-  margin-bottom: 0.4em;
+  line-height: var(--title-font-size);
+  margin-bottom: 0.6em;
 }
 
 .card__body {
@@ -74,6 +136,8 @@ body {
 }
 
 .text {
-  font-family: 'Nunito', sans-serif;
+  font-family: var(--text-font), sans-serif;
   text-align: center;
+  font-size: var(--text-font-size);
+  line-height: var(--text-font-size);
 }
