@@ -2,8 +2,8 @@
 Flashcard app - cycle through the cards &amp; continue where you left off
 
 ## TODO
-Responsibility
-Add the ability to change colour themes
-Add the ability to hide/unhide the menu
-Create your own flashcards
+Responsibility <br />
+Add the ability to change colour themes <br />
+Add the ability to hide/unhide the menu <br />
+Create your own flashcards <br />
 Having multiple sets of flashcards
