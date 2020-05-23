@@ -3,8 +3,8 @@ Flashcard app - cycle through the cards, change settings &amp; continue where yo
 
 ## TODO
 Responsivity <br />
-Add the ability to change colour themes <br />
-Reset <br />
+Add the ability to change colour themes - <b>DONE</b> <br />
+Reset - <b>DONE</b> <br />
 Add the ability to hide/unhide the menu <br />
 Add the ability to flag each card (learnt or not) <br />
 Edit the flashcards <br />
