@@ -120,17 +120,17 @@ colourSchemePicker.addEventListener('change', (e) => {
 // Object containing the flashcard's title and text body
 let flashcards = {
   title: [
-    'zahlen',
-    'eins',
-    'zwei',
-    'drei',
-    'vier',
-    'funf',
-    'sechs',
-    'sieben',
-    'acht',
-    'neun',
-    'zehn',
+    'mga numero ng',
+    'isa',
+    'dalawa',
+    'tatlo',
+    'apat',
+    'lima',
+    'anim',
+    'pito',
+    'walo',
+    'siyam',
+    'sampu',
   ],
   text: [
     'numbers',
