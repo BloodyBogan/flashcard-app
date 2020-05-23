@@ -20,7 +20,8 @@
 }
 
 p,
-span {
+span,
+option {
   font-family: var(--text-font);
 }
 
@@ -42,7 +43,8 @@ body {
   top: 10px;
 }
 
-.options__fontSize {
+.options__fontSize,
+.options__colourScheme {
   height: 20px;
   display: flex;
   align-items: center;
@@ -50,7 +52,8 @@ body {
   margin: 0 15px;
 }
 
-.options__fontSize p {
+.options__fontSize p,
+.options__colourScheme p {
   color: var(--clr-card-background);
 }
 
@@ -72,6 +75,20 @@ body {
 
 .btn:nth-child(2) {
   margin-left: 15px;
+}
+
+select.btn {
+  font-weight: normal;
+}
+
+select.btn option {
+  background: var(--clr-background);
+  color: var(--clr-card-background);
+}
+
+select.btn:hover,
+select.btn:focus {
+  font-weight: bold;
 }
 
 .cardContainer {

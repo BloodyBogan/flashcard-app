@@ -3,6 +3,7 @@ const text = document.querySelector('.text');
 const leftButton = document.querySelector('.left');
 const rightButton = document.querySelector('.right');
 
+// Title Font Size
 const titleFontSizeText = document.querySelector('.titleFontSize');
 const titlePlusButton = document.querySelector('.titlePlus');
 const titleMinusButton = document.querySelector('.titleMinus');
@@ -44,6 +45,7 @@ titleMinusButton.addEventListener('click', () => {
   title.style.setProperty('--title-font-size', titleFontSize + 'rem');
 });
 
+// Text Font Size
 const textFontSizeText = document.querySelector('.textFontSize');
 const textPlusButton = document.querySelector('.textPlus');
 const textMinusButton = document.querySelector('.textMinus');
@@ -75,19 +77,60 @@ textMinusButton.addEventListener('click', () => {
   text.style.setProperty('--text-font-size', textFontSize + 'rem');
 });
 
+// Colour Scheme
+const colourSchemePicker = document.querySelector('.colourScheme');
+
+let colourSchemeOptions = {
+  brown: ['#3e3e3e', '#d6c7a1', '#3e3e3e', '#f6e7c1'],
+  navy: ['#0E2431', '#F5E4C3', '#0E2431', '#FAF4D0'],
+};
+
+let colourScheme;
+let root = document.documentElement;
+
+function setColourScheme(colourScheme) {
+  root.style.setProperty(
+    '--clr-background',
+    colourSchemeOptions[colourScheme][0]
+  );
+  root.style.setProperty(
+    '--clr-card-background',
+    colourSchemeOptions[colourScheme][1]
+  );
+  root.style.setProperty('--clr-text', colourSchemeOptions[colourScheme][2]);
+  root.style.setProperty('--clr-buttons', colourSchemeOptions[colourScheme][3]);
+}
+
+if (!localStorage.colourScheme) {
+  colourScheme = 'brown';
+  colourSchemePicker.value = colourScheme;
+  localStorage.setItem('colourScheme', colourScheme);
+} else {
+  colourScheme = localStorage.getItem('colourScheme');
+  setColourScheme(colourScheme);
+  colourSchemePicker.value = colourScheme;
+}
+
+colourSchemePicker.addEventListener('change', (e) => {
+  colourScheme = e.target.value;
+  localStorage.setItem('colourScheme', colourScheme);
+  setColourScheme(colourScheme);
+});
+
+// Object containing the flashcard's title and text body
 let flashcards = {
   title: [
-    'mga numero ng',
-    'isa',
-    'dalawa',
-    'tatlo',
-    'apat',
-    'lima',
-    'anim',
-    'pito',
-    'walo',
-    'siyam',
-    'sampu',
+    'zahlen',
+    'eins',
+    'zwei',
+    'drei',
+    'vier',
+    'funf',
+    'sechs',
+    'sieben',
+    'acht',
+    'neun',
+    'zehn',
   ],
   text: [
     'numbers',
