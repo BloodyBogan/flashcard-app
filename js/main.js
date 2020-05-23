@@ -117,6 +117,45 @@ colourSchemePicker.addEventListener('change', (e) => {
   setColourScheme(colourScheme);
 });
 
+// Reset
+const resetButton = document.querySelector('.reset');
+
+let originalTitleFontSize = 2.0;
+let originalTextFontSize = 1.1;
+let originalColourScheme = 'brown';
+
+resetButton.addEventListener('click', () => {
+  if (!localStorage.titleFontSize) {
+    titleFontSizeText.innerText =
+      Math.round(originalTitleFontSize * 10) / 10 + 'rem';
+    localStorage.setItem('titleFontSize', originalTitleFontSize);
+  } else {
+    titleFontSize = Math.round(originalTitleFontSize * 10) / 10;
+    localStorage.setItem('titleFontSize', titleFontSize);
+    title.style.setProperty('--title-font-size', titleFontSize + 'rem');
+    titleFontSizeText.innerText = titleFontSize + 'rem';
+  }
+  if (!localStorage.textFontSize) {
+    textFontSizeText.innerText =
+      Math.round(originalTextFontSize * 10) / 10 + 'rem';
+    localStorage.setItem('textFontSize', originalTextFontSize);
+  } else {
+    textFontSize = Math.round(originalTextFontSize * 10) / 10;
+    localStorage.setItem('textFontSize', textFontSize);
+    text.style.setProperty('--text-font-size', textFontSize + 'rem');
+    textFontSizeText.innerText = textFontSize + 'rem';
+  }
+  if (!localStorage.colourScheme) {
+    colourScheme = originalColourScheme;
+    colourSchemePicker.value = colourScheme;
+    localStorage.setItem('colourScheme', colourScheme);
+  } else {
+    setColourScheme(originalColourScheme);
+    localStorage.setItem('colourScheme', originalColourScheme);
+    colourSchemePicker.value = originalColourScheme;
+  }
+});
+
 // Object containing the flashcard's title and text body
 let flashcards = {
   title: [
